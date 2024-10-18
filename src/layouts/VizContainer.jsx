@@ -7,6 +7,7 @@ import ContinousCoupled from "../components/ContinuousCoupled";
 import ContinousDecoupled from "../components/ContinuousDecoupled";
 import { VizLabels, VizTypes } from "../utils/constants";
 import DiscreteCoupled from "../components/DiscreteCoupled";
+import DiscreteDecoupled from "../components/DiscreteDecoupled";
 
 
 export function VizContainer() {
@@ -49,6 +50,8 @@ function Visulization({ viztype, data }) {
 			return <ContinousDecoupled itemdata={data} />
 		case VizTypes.DISCRETE_COUPLED:
 			return <DiscreteCoupled itemdata={data} />
+		case VizTypes.DISCRETE_DECOUPLED:
+			return <DiscreteDecoupled itemdata={data} />
 		default:
 			<></>
 
