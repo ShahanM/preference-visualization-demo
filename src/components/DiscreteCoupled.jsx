@@ -22,15 +22,15 @@ export default function DiscreteCoupled({ itemdata }) {
     ).map((d) => d[1]), [itemdata])
 
     const mylikesCommDislikes = useMemo(() => Object.entries(itemdata['movies']).filter((d) =>
-        parseFloat(d.user_score) > likeCuttoff && parseFloat(d.community_score) < dislikeCuttoff
+        parseFloat(d.user_score) > likeCuttoff && parseFloat(d.community_score) <= dislikeCuttoff
     ).map((d) => d[1]), [itemdata])
 
     const mydislikesCommLikes = useMemo(() => Object.entries(itemdata['movies']).filter((d) =>
-        parseFloat(d[1].user_score) < dislikeCuttoff && parseFloat(d[1].community_score) > likeCuttoff
+        parseFloat(d[1].user_score) <= dislikeCuttoff && parseFloat(d[1].community_score) > likeCuttoff
     ).map((d) => d[1]), [itemdata])
 
     const mydislikesCommDislikes = useMemo(() => Object.entries(itemdata['movies']).filter((d) =>
-        parseFloat(d[1].user_score) < dislikeCuttoff && parseFloat(d[1].community_score) < dislikeCuttoff
+        parseFloat(d[1].user_score) <= dislikeCuttoff && parseFloat(d[1].community_score) < dislikeCuttoff
     ).map((d) => d[1]), [itemdata])
 
     return (

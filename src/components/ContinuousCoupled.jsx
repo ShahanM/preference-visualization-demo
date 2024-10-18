@@ -18,9 +18,9 @@ export default function Continuouscoupled({ itemdata }) {
 						<Row style={{ margin: "0 0 2em 0" }}>
 							<CartesianGraph key={"user"}
 								graphID={"user_comm_graph"}
-								width={800} height={800}
+								width={800} height={900}
 								data={itemdata['movies']}
-								xCol={"user_score"} yCol={"community_score"}
+								xCol={"community_score"} yCol={"user_score"}
 								onItemHover={setActiveItem} />
 						</Row>
 					</Col>
