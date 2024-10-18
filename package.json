@@ -24,7 +24,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "cross-env PORT=3331 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -35,7 +35,7 @@
       "react-app/jest"
     ]
   },
-  "homepage": "https://rssa.recsys.dev/preference-visualization",
+  "homepage": "https://rssa.recsys.dev/demo/preference-visualization",
   "browserslist": {
     "production": [
       ">0.2%",

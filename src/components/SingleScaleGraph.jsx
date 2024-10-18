@@ -183,7 +183,8 @@ export default function SingleScaleGraph({ graphID, width, height, data, dataInf
 					width={posterWidth} height={posterHeight}
 					x={(d.score - 1) * xSubdivWidth}
 					y={svgDrawingBaseline}
-					xlinkHref={imgurl(dataInfo[d.item_id].poster_identifier)}
+					// xlinkHref={imgurl(dataInfo[d.item_id].poster_identifier)}
+					xlinkHref={dataInfo[d.item_id].poster}
 					cursor={"pointer"}
 					item_id={d.item_id} item_score={d.score}
 					item_type={"img"}

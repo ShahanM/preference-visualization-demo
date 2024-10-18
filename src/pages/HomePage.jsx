@@ -31,15 +31,15 @@ export default function HomePage() {
 						</Button>
 					</li>
 				</ul>
-				<p>
-					Each type has 4 different visualizations.
-					<ol>
-						<li>Continuous Coupled</li>
-						<li>Continuous Decoupled</li>
-						<li>Discreet Coupled</li>
-						<li>Discreet Decoupled</li>
-					</ol>
-				</p>
+				{/* <p> */}
+				Each type has 4 different visualizations.
+				<ol>
+					<li>Continuous Coupled</li>
+					<li>Continuous Decoupled</li>
+					<li>Discreet Coupled</li>
+					<li>Discreet Decoupled</li>
+				</ol>
+				{/* </p> */}
 			</Row>
 			<Row className="footer-row">
 

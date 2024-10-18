@@ -193,7 +193,8 @@ function PreferenceContainer({ graphID, movies, width, height, onItemHover }) {
                     width={posterWidth} height={posterHeight}
                     x={coords[i].x}
                     y={coords[i].y}
-                    xlinkHref={imgurl(d.poster_identifier)}
+                    // xlinkHref={imgurl(d.poster_identifier)}
+                    xlinkHref={d.poster}
                     cursor={"pointer"}
                     item_id={d.movie_id}
                     x_val={coords[i].x} y_val={coords[i].y}

@@ -34,7 +34,7 @@ export const router = createBrowserRouter(
 				<Route path=":vizId" element={<VizContainer />} />
 			</Route>
 		</Route>
-	), { basename: "/preference-visualization" }
+	), { basename: "/demo/preference-visualization" }
 )
 
 export function DefaultLayout() {

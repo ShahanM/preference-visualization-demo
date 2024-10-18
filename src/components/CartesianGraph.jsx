@@ -119,7 +119,8 @@ function ImageGraph({ data, graphID, width, height, xCol, yCol, xSubdivWidth, yS
 					width={posterWidth} height={posterHeight}
 					x={(d[1][xCol] - 1) * xSubdivWidth + xAxisOffset}
 					y={height - (d[1][yCol] - 1) * ySubdivHeight - posterHeight - 2 * svgFontHeight - tickHeight}
-					xlinkHref={imgurl(d[1].poster_identifier)}
+					// xlinkHref={imgurl(d[1].poster_identifier)}
+					xlinkHref={d[1].poster}
 					cursor={"pointer"}
 					item_id={d[1].movie_id} x_val={d[1][xCol]} y_val={d[1][yCol]}
 					item_type={"img"}
