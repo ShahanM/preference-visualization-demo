@@ -18,7 +18,7 @@ export default function HomePage() {
 						<Button onClick={() =>
 							navigate("ratemovies",
 								{ state: { type: "implicit" } },
-								{ replace: true })} >
+								{ replace: true })} disabled>
 							Implicit
 						</Button>
 					</li>

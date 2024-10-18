@@ -37,6 +37,7 @@ export default function VisualizationLayout() {
 	useEffect(() => {
 		const getRecommendations = async () => {
 			setLoading(true);
+			console.log("VisualizationLayout", ratings);
 			post("prefviz/recommendation/", {
 				user_id: 0, // TODO: change this to the actual user id
 				user_condition: 0, // TODO: change this to the actual user condition
@@ -124,12 +125,12 @@ export default function VisualizationLayout() {
 					<Outlet context={{ movies: movies }} />
 				</Row>
 				<Row className="footer-row">
-					<Link to="/surveypage">
+					{/* <Link to="/surveypage">
 						<Button type="button"
 							className="btn btn-primary btn-light float-right">
 							Next Page
 						</Button>
-					</Link>
+					</Link> */}
 				</Row>
 			</Container>
 		</>
