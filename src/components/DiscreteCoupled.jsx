@@ -22,7 +22,7 @@ export default function DiscreteCoupled({ itemdata }) {
     ).map((d) => d[1]), [itemdata])
 
     const mylikesCommDislikes = useMemo(() => Object.entries(itemdata['movies']).filter((d) =>
-        parseFloat(d.user_score) > likeCuttoff && parseFloat(d.community_score) <= dislikeCuttoff
+        parseFloat(d[1].user_score) > likeCuttoff && parseFloat(d[1].community_score) <= dislikeCuttoff
     ).map((d) => d[1]), [itemdata])
 
     const mydislikesCommLikes = useMemo(() => Object.entries(itemdata['movies']).filter((d) =>
@@ -113,7 +113,8 @@ export default function DiscreteCoupled({ itemdata }) {
 }
 
 function PreferenceContainer({ graphID, movies, width, height, onItemHover }) {
-
+    width = width - 50;
+    height = height - 50;
     // Compute coordinates for the graph by spreading out contents furthest 
     // from each other and from the boundaries of the box
     const coords = useMemo(() => {
@@ -197,7 +198,8 @@ function PreferenceContainer({ graphID, movies, width, height, onItemHover }) {
                     xlinkHref={d.poster}
                     cursor={"pointer"}
                     item_id={d.movie_id}
-                    x_val={coords[i].x} y_val={coords[i].y}
+                    x_val={coords[i].x}
+                    y_val={coords[i].y}
                     item_type={"img"}
                     onMouseEnter={evt => handleHover(evt, "in")}
                     onMouseLeave={evt => handleHover(evt, "out")}
