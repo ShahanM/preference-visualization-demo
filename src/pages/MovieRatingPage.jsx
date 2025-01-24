@@ -41,7 +41,7 @@ export default function MovieRatingPage(props) {
 
 	useEffect(() => {
 		const getAllMovieIds = async () => {
-			get('ers/movies/ids/')
+			get('v1/ers/movies/ids/')
 				.then((response): Promise<movie[]> => response.json())
 				.then((newmovies: movie[]) => {
 					setMovieIds(newmovies);

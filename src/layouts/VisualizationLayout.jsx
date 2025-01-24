@@ -38,7 +38,7 @@ export default function VisualizationLayout() {
 		const getRecommendations = async () => {
 			setLoading(true);
 			console.log("VisualizationLayout", ratings);
-			post("prefviz/recommendation/", {
+			post("v2/demo/prefviz/recommendation/", {
 				user_id: 0, // TODO: change this to the actual user id
 				user_condition: 0, // TODO: change this to the actual user condition
 				ratings: ratings,
@@ -62,7 +62,7 @@ export default function VisualizationLayout() {
 
 	useEffect(() => {
 		const getMoviesByIDs = async (imap) => {
-			post('ers/movies/', Object.keys(imap))
+			post('v1/ers/movies/', Object.keys(imap))
 				.then((response): Promise<movie[]> => response.json())
 				.then((movies: movie[]) => {
 					const moviemap = movies.reduce((map, movie) => {

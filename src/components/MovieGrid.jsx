@@ -66,7 +66,7 @@ export default function MovieGrid({ movieIds, itemsPerPage,
 	useEffect(() => {
 		const getMoviesByIDs = async (ids) => {
 			console.log(ids);
-			post('ers/movies/', ids)
+			post('v1/ers/movies/', ids)
 				.then((response): Promise<movie[]> => response.json())
 				.then((newmovies: movie[]) => {
 					console.log(newmovies);
